@@ -1,5 +1,6 @@
 var searchImput = $('#search-input')
 var searchBtn = $('#search-button')
+var today = $('#today')
 
 
 searchBtn.on('click', function(event){
@@ -24,9 +25,13 @@ searchBtn.on('click', function(event){
         var p3 = $('<p>')
         p3.text("Wind: " + data.wind.speed)
         var p4 = $('<p>')
-        
-    
+        p4.text("Humidity: " + data.main.humidity)
+        console.log(p4)
+
         singleDay.append(p1, p2, p3, p4)
+        today.append(singleDay)
+    
+        
         console.log(singleDay)
     
     

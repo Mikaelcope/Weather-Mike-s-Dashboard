@@ -1,0 +1,24 @@
+.header {
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(90deg, #001aff, #4b037a);
+    color: white;
+}
+
+
+
+
+
+.split {
+    display: flex;
+}
+
+.left {
+    width: 30%;
+}
+
+.right {
+    width: 70%;
+    border: solid black 2px;
+    padding: 5px;
+}
