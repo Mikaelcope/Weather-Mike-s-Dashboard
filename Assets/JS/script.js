@@ -12,11 +12,25 @@ var day = dayjs().format('DD-MM-YYYY')
 // })
 
 
+var oldData = JSON.parse(localStorage.getItem('data'));
 
+localStorage.setItem('data', JSON.stringify(oldData));
+
+if(localStorage.getItem('data')!= null){
+    
+    for(j=0; j < oldData.length; j++){
+    imputBtn = $('<button>')
+    imputBtn.addClass('localBTN')
+    // console.log(oldData)
+    imputBtn.text(oldData[j])
+    // console.log(imputBtn)
+    $('#history').append(imputBtn)
+}}
 
 searchBtn.on('click', function(event){
     event.preventDefault()
     today.empty()
+    $('#history').empty()
     var searchVal = searchImput.val().trim()
 
     //Input button into search history
