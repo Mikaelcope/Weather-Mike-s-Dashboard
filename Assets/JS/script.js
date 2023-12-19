@@ -1,20 +1,22 @@
 var searchImput = $('#search-input')
 var searchBtn = $('#search-button')
 var today = $('#today')
+var foreCast = $('#fiveDay')
+
 
 
 searchBtn.on('click', function(event){
     event.preventDefault()
     var searchVal = searchImput.val().trim()
     var query1Day = "https://api.openweathermap.org/data/2.5/weather?q=" + searchVal + "&appid=69a234fe9433fd65a7b8623a7427cfc3"
-    // var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + searchVal + "&appid=69a234fe9433fd65a7b8623a7427cfc3"
+    
     
     fetch(query1Day)
     .then(function (response){
         return response.json();
     })
     .then(function(data){
-        console.log(data)
+        // console.log(data)
 
         var singleDay = $('<div>')
         var p1 = $('<h2>')
@@ -30,16 +32,66 @@ searchBtn.on('click', function(event){
 
         singleDay.append(p1, p2, p3, p4)
         today.append(singleDay)
+
+    })
     
         
-        console.log(singleDay)
+        // console.log(singleDay)
     
-    
+        var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + searchVal + "&appid=69a234fe9433fd65a7b8623a7427cfc3"
+        fetch(queryURL)
+        .then(function (res1){
+            return res1.json();
+        })
+        .then(function(five){
+            console.log(five)
+            
+            
+
+            // console.log(forecastArray[0].main.temp)
+
+         var forecastArray = five.list
+
+
+
+
+
+            for(i = 0; i < forecastArray.length; i++){
+
+                
+                var date = $('<h3>')
+                date.text('Date')
+                var card1 = $('<p>')
+                card1.text('icon')
+                var card2 = $('<p>')
+                card2.text("Temp: " + forecastArray[i].main.temp)
+
+                var card3 = $('<p>')
+                card3.text("Wind: " + forecastArray[i].wind.speed)
+                var card4 = $('<p>')
+                card4.text("Humidity: " + forecastArray[i].main.humidity)
+                
+
+
+                
+                // foreCast.append(card)
+                // var foreCastHTML = $('#fiveDay')
+                // foreCastHTML.append(foreCast)
+            
+                // classHead.append(foreCast)
+                 // console.log(forecastArray[i].main.temp)
+                // console.log(foreCast)
+
+            }
+            // var weatherCard = $('div')
+            // weatherCard.append(card1, card2, card3, card4)
+
+        
     })
     
 
 
-    var foreCast = $('<dive>')
+    var foreCast = $('<div>')
 })
 // 1. When user search for a city in the input, call weather API and show the result in the HTML
 //    - Add event listener to form submit
@@ -75,4 +127,4 @@ searchBtn.on('click', function(event){
 //     })
 //     .then(function(data) {
 //         console.log(data);
-//     })
+    // })

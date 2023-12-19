@@ -17,8 +17,16 @@
     width: 30%;
 }
 
-.right {
+.rightContainer {
     width: 70%;
+}
+.right1 {
+
     border: solid black 2px;
     padding: 5px;
+    margin: 10px;
+}
+
+.right2 {
+    margin: 10px;
 }
