@@ -1,13 +1,29 @@
 .header {
     justify-content: center;
     text-align: center;
-    background: linear-gradient(90deg, #001aff, #4b037a);
+    background: linear-gradient(90deg, rgb(228, 173, 56), #14b6b6);
     color: white;
 }
 
+h2 {
+    margin: 10px;
+}
 
+.form-input {
+    height: 50px;
+    width: 400px;
+    font-size:x-large;
+    margin: 10px;
+    border: solid black 1px;
+}
 
-
+.search-button {
+    height: 40px;
+    width: 150px;
+    font-size: larger;
+    margin: 10px;
+    background-color: rgb(124, 180, 157);
+}
 
 .split {
     display: flex;
@@ -19,34 +35,51 @@
 
 .rightContainer {
     width: 70%;
+    
 }
 .right1 {
 
-    border: solid black 2px;
     padding: 5px;
     margin: 10px;
+}
+
+.foreHead {
+    margin: 15px;
+    font-size: x-large;
+    font-weight: 600;
 }
 
 .right2 {
     margin: 10px;
     display: flex;
-    width: 70%;
+    width: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+
 }
 .card1 {
     display: block;
-    background-color: #171e61;
-    margin: !important 5px;
-    width: !important 500px;
-    height: !important 150px;
+    background-color: #14b6b6;
+    margin: 5px;
+    width: 100px;
+    height: fit-content;
     justify-content: left;
     align-items: center;
     color: white;
     padding: 10px;
     border: solid white 5px;
+    
+}
+
+.singleBox {
+    border: solid black 2px;
+    padding: 5px;
 }
 
 .localBTN {
-    width: 250px;
-    height: 40px;
-    background-color: aqua;
+    width: 400px;
+    height: 60px;
+    background-color: rgb(228, 173, 56);
+    margin: 10px;
+    font-size: 30px;
 }
