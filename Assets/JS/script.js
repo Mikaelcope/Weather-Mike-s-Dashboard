@@ -23,7 +23,10 @@ if(localStorage.getItem('data')!= null){
 }}
 
 var storageBTN = $('.localBTN')
-storageBTN.on('click', function(event){
+var historyDiv = $('#history')
+historyDiv.on('click', function(event){
+    if(!event.target.matches('.localBTN'))
+    return
     event.preventDefault()
     today.empty()
     foreCast.empty()
@@ -93,7 +96,7 @@ searchBtn.on('click', function(event){
     event.preventDefault()
     today.empty()
     $('#history').empty()
-    var searchVal = searchImput.val().trim()
+    var searchVal = searchImput.val().toUpperCase().trim()
 
         console.log(searchVal)
     
