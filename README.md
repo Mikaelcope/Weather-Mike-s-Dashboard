@@ -11,18 +11,14 @@ https://mikaelcope.github.io/Weather-Mike-s-Dashboard/
 
 ### Usage
 Once the URL has loaded this is what you will see: 
-![alt text](./Assets/Images/Screenshot%202023-12-12%20194752.png)<br>
-Note: Image may display multiple colours based on the time of day. <br>
-Grey: Passed Hours <br>
-Red: Current Hour <br>
-Green: Future Hours (Available Hours) <br>
-
-The page will load any information in the current local storage, if none, inputs will be blank. The user will be able to input tasks planned for the day and save. This information will be saved to the local storage. The user can then delete the information in the text area and save to blank the space.
+![alt text](./Assets/Images/Screenshot1.png)<br>
+User can input a city of choice from around the world and click search. <br>
+If the input is a calid city, both current weather and a 5 day forecast will be displayed.<br>
 
 
 ### Credits
 EdX front end web development course.
-
+Open Weather API: https://openweathermap.org/
 
 ### License
 MIT License
