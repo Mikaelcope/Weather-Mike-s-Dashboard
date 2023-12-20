@@ -71,7 +71,7 @@ searchBtn.on('click', function(event){
 
     
             //get old data//
-            if(localStorage.getItem('data') == null){
+            if(localStorage.getItem('data') === null){
                 localStorage.setItem('data', '[]');
             }
             var oldData = JSON.parse(localStorage.getItem('data'));
